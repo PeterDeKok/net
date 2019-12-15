@@ -9,9 +9,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"io"
 	n "net"
-	"peterdekok.nl/logger"
-	"peterdekok.nl/net/message"
-	"peterdekok.nl/trap"
+	"peterdekok.nl/gotools/logger"
+	"peterdekok.nl/gotools/net/message"
+	"peterdekok.nl/gotools/trap"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -154,9 +154,12 @@ func (conn *Connection) writeBytes(cmd []byte) (err error) {
 func (conn *Connection) read(l *logrus.Entry) {
 	// Close connection when this function ends
 	defer func() {
-		l.Info("TCP reader stopped")
-		l.Info("Closing connection")
+		l.Debug("TCP reader stopped")
+		l.Debug("Closing connection")
 
+		// Reader should not (completely) exit before writer(s) are closed.
+		// We set closing here and wait for a lock.
+		// Any writes after getting the lock. Will simply fail early
 		atomic.AddInt32(&conn.closing, 1)
 
 		l.Debug("Waiting on writers to close")
@@ -175,7 +178,7 @@ func (conn *Connection) read(l *logrus.Entry) {
 		l.Info("Connection closed")
 	}()
 
-	l.Info("Start TCP reader")
+	l.Debug("Start TCP reader")
 
 	bufReader := bufio.NewReader(conn.tcp)
 

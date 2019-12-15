@@ -3,7 +3,7 @@ package fields
 import (
 	"bytes"
 	"errors"
-	"peterdekok.nl/net/field"
+	"peterdekok.nl/gotools/net/field"
 )
 
 const Separator = "\r\n"

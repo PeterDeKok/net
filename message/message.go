@@ -3,8 +3,8 @@ package message
 import (
 	"bytes"
 	"fmt"
-	"peterdekok.nl/net/field"
-	"peterdekok.nl/net/fields"
+	"peterdekok.nl/gotools/net/field"
+	"peterdekok.nl/gotools/net/fields"
 )
 
 const Separator = fields.Separator + fields.Separator

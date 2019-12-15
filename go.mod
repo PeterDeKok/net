@@ -1,15 +1,9 @@
-module peterdekok.nl/net
+module peterdekok.nl/gotools/net
 
 go 1.13
 
 require (
-	peterdekok.nl/config v0.0.0
-	peterdekok.nl/logger v0.0.0
-	peterdekok.nl/trap v0.0.0
-)
-
-replace (
-	peterdekok.nl/config => ../config
-	peterdekok.nl/logger => ../logger
-	peterdekok.nl/trap => ../trap
+	github.com/sirupsen/logrus v1.4.2
+	peterdekok.nl/gotools/logger v0.0.1
+	peterdekok.nl/gotools/trap v0.0.3
 )
