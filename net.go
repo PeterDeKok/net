@@ -1,3 +1,4 @@
+// Package net contains tools to make ASCII TCP connections easier
 package net
 
 import (
