@@ -19,9 +19,13 @@ github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXf
 golang.org/x/sys v0.0.0-20190422165155-953cdadca894/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20191204072324-ce4227a45e2e h1:9vRrk9YW2BTzLP0VCB9ZDjU4cPqkg+IDWL7XgxA1yxQ=
 golang.org/x/sys v0.0.0-20191204072324-ce4227a45e2e/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+golang.org/x/sys v0.0.0-20191220220014-0732a990476f h1:72l8qCJ1nGxMGH26QVBVIxKd/D34cfGt0OvrPtpemyY=
+golang.org/x/sys v0.0.0-20191220220014-0732a990476f/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 peterdekok.nl/gotools/config v0.0.1 h1:xjynnJ4jBvmW7G9YKRxfShfVlnYFn9w5AC/uSs1P/aM=
 peterdekok.nl/gotools/config v0.0.1/go.mod h1:scDCf9KVjZJDcXApHQOR5SawNubN/gr90NRuutnkUTM=
 peterdekok.nl/gotools/logger v0.0.1 h1:8KVTYKWHo40XIfdfFYUDKPCpxK3jEUDXO6JVQJa+dBU=
 peterdekok.nl/gotools/logger v0.0.1/go.mod h1:IE67zAuYGil5LV36ty7kio/uiFPWV9hAfKaX0q4e7BU=
+peterdekok.nl/gotools/logger v0.0.2 h1:6G9I7JU+AWTDzM9/63g7/WafFirOqk2dAxw2mOyf+4o=
+peterdekok.nl/gotools/logger v0.0.2/go.mod h1:IE67zAuYGil5LV36ty7kio/uiFPWV9hAfKaX0q4e7BU=
 peterdekok.nl/gotools/trap v0.0.3 h1:UKthyLDQMVhZm2XqdGbKCGEwwTD1RgWdYTI1nZvYDhs=
 peterdekok.nl/gotools/trap v0.0.3/go.mod h1:LYaE2PBYhFm/sLjs8kFVRPK7jMvBFkrrJ9PAM4pXApk=
