@@ -4,9 +4,7 @@ package net
 import (
 	"bufio"
 	"bytes"
-	"encoding/json"
 	"errors"
-	"fmt"
 	"github.com/sirupsen/logrus"
 	"io"
 	n "net"
@@ -140,9 +138,6 @@ func (conn *Connection) writeBytes(cmd []byte) (err error) {
 		return err
 	}
 
-	// TODO REMOVE DEBUG About to write command, or maybe log separately??
-	fmt.Printf("====================================\n%s====================================\n\n", cmd)
-
 	if _, err := conn.tcp.Write(cmd); err != nil {
 		log.WithField("cmd", cmd).WithError(err).Error("Failed to send command")
 
@@ -197,7 +192,7 @@ func (conn *Connection) read(l *logrus.Entry) {
 
 		// Read tokens delimited by newline and ignore any errors
 		b, err := bufReader.ReadBytes('\n')
-		
+
 		if err == io.EOF {
 			log.WithError(err).Warn("Connection reached EOF, probably closed by server")
 
@@ -209,10 +204,6 @@ func (conn *Connection) read(l *logrus.Entry) {
 
 			continue
 		}
-
-		// TODO Debug statement
-		str, _ := json.Marshal(string(b))
-		fmt.Printf(">>>%s<<<\n", str)
 
 		conn.readBuffer = append(conn.readBuffer, b...)
 
